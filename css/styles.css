@@ -26,6 +26,7 @@ section#home header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 3rem;
 }   
 section#home header .title{
     width: 33%;
@@ -84,8 +85,18 @@ section#home #content{
 }
 section#home #content div{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 section#home #content h2{
     font-size: 3rem;
+}
+section#home #content img{
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    
 }
