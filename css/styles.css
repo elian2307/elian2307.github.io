@@ -214,7 +214,7 @@ section#services {
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2rem  ;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,6 +283,7 @@ section#skills {
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -362,26 +363,29 @@ section#skills .skills-container .skill-progress .skill-bar-progress > * {
 }
 section#portfolio {
   width: 100%;
-  height: 150dvh;
   padding-left: 3rem;
   padding-right: 3rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: repeat(3, 1fr) 7fr;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
 }
 section#portfolio h2 {
   font-size: 2rem;
   font-weight: 900;
-  grid-row: 1;
+  grid-row: 2;
 }
 section#portfolio h3 {
   font-size: 1.2rem;
   font-weight: 700;
-  grid-row: 2;
+  grid-row: 1;
 }
 section#portfolio .buttons-category-container{
-    width: 40%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -389,6 +393,7 @@ section#portfolio .buttons-category-container{
     grid-row: 3;
 }
 section#portfolio .buttons-category-container button {
+    width: auto;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;
@@ -422,25 +427,30 @@ section#portfolio .portfolio-items-container .portfolio-item:hover {
   transform: translateY(-3px);
 }
 section#portfolio .portfolio-items-container .portfolio-item{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 2fr) 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+section#portfolio .portfolio-items-container .portfolio-item .portfolio-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 1rem;
 }
 section#portfolio .portfolio-items-container .portfolio-item img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 0.5rem;
-  grid-column: span 3 / span 3;
-  grid-row: span 3 / span 3;
 }
 section#portfolio .portfolio-items-container .portfolio-item h4 {
   padding: 0.5rem 0;
   font-size: 1.2rem;
   font-weight: 700;
-  grid-column: span 2 / span 2;
-  grid-row-start: 4;
-  align-self: center;
 }
 section#portfolio .portfolio-items-container .portfolio-item button {
   padding: 0.5rem 1rem;
@@ -450,10 +460,6 @@ section#portfolio .portfolio-items-container .portfolio-item button {
   color: #ffffff;
   cursor: pointer;
   transition: background 0.2s;
-  grid-column-start: 3;
-    grid-row-start: 4;
-  justify-self: end;
-  align-self: center;
 }
 section#portfolio .portfolio-items-container .portfolio-item button:hover {
   background: #0a0a0a;
