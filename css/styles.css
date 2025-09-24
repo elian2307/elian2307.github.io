@@ -211,10 +211,10 @@ section#about .info-about .percents-container .percents-labels {
 }
 section#services {
   width: 100%;
-  height: 100dvh;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 1rem;
+  padding-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,7 +239,6 @@ section#services .services-card-container {
 
 section#services .service-card {
   height: auto;
-  max-height: 40vh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -281,7 +280,6 @@ section#services .service-card img {
 }
 section#skills {
   width: 100%;
-  height: 100dvh;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 1rem;
