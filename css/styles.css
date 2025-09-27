@@ -540,4 +540,22 @@ section#contact .contact-form-container form button {
   }
 }
 
+footer {
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  /* Fondo con overlay oscuro sobre la imagen */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://github.com/elian2307.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
 
