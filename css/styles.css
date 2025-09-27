@@ -9,11 +9,12 @@ body {
   color: aliceblue;
   background: #020024;
   background: linear-gradient(
-    160deg,
-    rgba(2, 0, 36, 1) 0%,
-    #090979 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  160deg,
+  rgba(2, 0, 36, 1) 0%,
+  #090979 35%,
+  #005fba 100%
+);
+
 }
 p {
   font-size: 1.2rem;
@@ -464,3 +465,79 @@ section#portfolio .portfolio-items-container .portfolio-item button {
 section#portfolio .portfolio-items-container .portfolio-item button:hover {
   background: #0a0a0a;
 }   
+
+section#contact {
+  width: 100%;
+  min-height: 100dvh; /* más flexible que height */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas iguales */
+  grid-template-rows: auto 1fr; /* título/texto arriba, resto abajo */
+  gap: 2rem;
+  padding: 2rem 3rem;
+}
+
+section#contact h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  padding-bottom: 1rem;
+}
+
+section#contact .contact-info-container .contact-dots-container .contact-dot {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+section#contact .contact-info-container .contact-dots-container .contact-dot span{
+  font-size: 2rem;
+  background-color: #090979;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: #ffffff;
+}
+section#contact .contact-form-container{
+  background: #ffffff3f;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+section#contact .contact-form-container form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+section#contact .contact-form-container form input,
+section#contact .contact-form-container form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+section#contact .contact-form-container form button {
+  width: 30%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #090979;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Extra: para pantallas pequeñas, que se apile */
+@media (max-width: 768px) {
+  section#contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+
