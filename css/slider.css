@@ -1,0 +1,48 @@
+.checked {
+  color: orange;
+}
+
+.card-link {
+  display: block;
+  background: #ffffff3f;
+  border: solid 1px #ccc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.card-title {
+  color: #fff;
+}
+
+.badge {
+  color: #fff;
+  width: fit-content;
+}
+/* Centrar el texto en pantallas pequeñas */
+@media (max-width: 640px) {
+  .card-link {
+    text-align: center;
+  }
+
+  .card-image {
+    aspect-ratio: 1/1; /* cuadrado en móviles si prefieres */
+
+  }
+}
+
+/* Ajustar en tablets */
+@media (max-width: 1024px) {
+  .card-link {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}

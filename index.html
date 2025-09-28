@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS de Splide -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="https://github.com/elian2307.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/elian2307.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/elian2307.png">
@@ -300,6 +305,59 @@
         </div>
 
     </section>
+    <section id="testimonials">
+  <h2>Testimonials</h2>
+  <div class="splide" aria-label="Testimonials slider">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <a href="javascript:void(0);" class="card-link">
+            <img src="img/jose.png" alt="Card image" class="card-image">
+            <p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <p class="card-title">Me limpio mi pc y la dejo como nuevo</p>
+            <h3 class="badge">Jose Pepe</h3>
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="javascript:void(0);" class="card-link">
+            <img src="img/orlando.jpg" alt="Card image" class="card-image">
+            <p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <p class="card-title">Me instalo linux en mi laptop</p>
+            <h3 class="badge">Orlando M.</h3>
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="javascript:void(0);" class="card-link">
+            <img src="img/leyva.jpg" alt="Card image" class="card-image">
+            <p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </p>
+            <p class="card-title">Es mi mejor amigo</p>
+            <h3 class="badge">Leyva</h3>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
     <section id="contact">
         <div class="contact-info-container">
             <h2>Contact Me</h2>
@@ -322,35 +380,69 @@
             </div>
             </div>
         </div>
+        <div class="map-wrapper"></div>
 
         <div class="contact-form-container">
             <form action="">
-                <h3>Send Me a Message</h3>
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" name="phone" id="phone" placeholder="Your Phone" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+            <h3>Send Me a Message</h3>
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" name="phone" id="phone" placeholder="Your Phone" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
+
     <footer>
         <div class="footer-container">
             <div class="footer-left">
                 <h4><span><img width="48" height="48" src="https://github.com/elian2307.png" alt="github avatar"></span>Elian Dominguez</h4>
                 <p>I´m Elian Dominguez, your friendly trusted developer.</p>
+                <p>© 2024 Elian Dominguez. All rights reserved.</p>
+                <a href="https://icons8.com/">Icons by Icons8</a>
+                <a href="https://fonts.google.com/icons">Symbols by Google Fonts</a>
             </div>
-            <div class="social-icons">
-                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/></span></a>
-                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/></span></a>
-                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/></span></a>
-                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/></span></a>
-                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/color/48/github.png" alt="github"/></span></a>
+            <div class="footer-right">
+                <div class="quick-links">
+                    <h5>Quick Links</h5>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Me</a>
+                    <a href="#skills">My Skills</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact Me</a>
+                </div>
+                <div class="social-icons">
+                <h5>My Social Links</h5>
+                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/></span> Facebook</a>
+                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/></span> Instagram</a>
+                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/></span> Twitter</a>
+                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/></span> LinkedIn</a>
+                <a href="#"><span><img width="48" height="48" src="https://img.icons8.com/color/48/github.png" alt="github"/></span> GitHub</a>
             </div>
+
+            </div>
+            
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('.splide', {
+      type   : 'loop',
+      perPage: 3,     // 3 tarjetas en pantallas grandes
+      gap    : '1rem',
+      breakpoints: {
+        1024: { perPage: 2 }, // 2 tarjetas en tablets
+        640 : { perPage: 1 }, // 1 tarjeta en móviles
+      },
+      pagination: true,
+      arrows: true,
+    }).mount();
+  });
+</script>
 
-    
-    
+
+
 </body>
 </html> 
