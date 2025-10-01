@@ -29,12 +29,12 @@ body{
     width: 100%;
 }
 .barril-wrapper{
-    width: 150px;
+    width: 130px;
 }
 .barril-wrapper.barril1{
     position: absolute;
-    top: 78%;
-    left: 83%;
+    top: 74%;
+    left: 81%;
 }
 .barril-wrapper.barril2{
     position: absolute;
@@ -46,4 +46,51 @@ body{
 }
 .barril-wrapper.barril2 img{
     transform: rotate(-30deg);
+}
+.giro-barril{
+    animation: giro-barril 5s linear infinite;
+}
+@keyframes giro-barril {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.salto{
+    animation: salto 5s ease-in-out infinite;
+}
+@keyframes salto {
+   from{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(-20px);
+        top: 0%;
+    }
+    40%{
+        left: 50%;
+        top: 44%;
+    }
+    60%{
+        transform: translateY(-20px);
+        top: 20%;
+    }
+    70%{
+        transform: translateY(-20px);
+        top: 60%;
+        left: 10%;
+    }
+    90%{
+        transform: translateY(0);
+        top: 15%;
+        left: 15%;
+    }
+    to{
+        transform: translateY(0);
+        top: 15%;
+        left: 15%;
+    }
+    
 }
