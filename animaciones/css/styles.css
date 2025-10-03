@@ -81,11 +81,24 @@ body{
         transform: translateY(-20px);
         top: 60%;
         left: 10%;
+        transform: rotate(-20deg);        
+    }
+    80%{
+        transform: translateY(0);
+        top: 60%;
+        left: 10%;
+        transform: rotate(40deg);
+    } 
+    85%{
+        transform: rotate(300deg);
     }
     90%{
         transform: translateY(0);
-        top: 15%;
+        top: -150%;
         left: 15%;
+        transform: rotate(680deg);
+        
+
     }
     to{
         transform: translateY(0);
