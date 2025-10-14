@@ -72,7 +72,7 @@ body.menu-open {
         gap: 2rem;
         box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
         transition: right 0.4s ease;
-        z-index: 999;
+        z-index: 1004;
         margin: 0;
     }
 
