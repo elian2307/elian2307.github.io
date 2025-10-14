@@ -5,8 +5,10 @@
     --accent: #254441;
     --primary-text: #000;
     --secondary-text: #757575;
+    --tertiary-text: #fff;
     --radius: 0.5rem;
     --primary-font: 'Inter', sans-serif;
+    --padding: 2rem;
 }
 *{
     margin: 0;
@@ -17,15 +19,15 @@
 body{
     background: var(--bg);
     color: var(--primary-text);
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 2rem;
 }
 header{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: var(--padding) var(--padding) 0;
+
+
 }
 header nav{
     width: 100%;
@@ -37,6 +39,10 @@ header nav .logo{
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+header nav .logo a{
+    text-decoration: none;
+    color: var(--primary-text);
 }
 header nav .logo h1{
     display: flex;
@@ -114,6 +120,8 @@ header .banner .banner-img img{
     gap: 3rem;
     align-items: center;
     justify-content: center;
+    padding: 0 var(--padding);
+
 }
 .destacado h2{
     font-size: 2.5rem;
@@ -149,4 +157,286 @@ header .banner .banner-img img{
     object-fit: cover;
     border-radius: var(--radius);
 }
+.destacado .product-card-wrapper .product-card .product-card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.destacado .product-card-wrapper .product-card .product-card-info h3 span{
+    text-decoration: line-through;
+    color: var(--secondary-text);
+}
 
+footer{
+    width: 100%;
+    margin-top: 3rem;
+    background: var(--accent);
+    color: var(--tertiary-text);
+    padding: var(--padding);
+}
+footer .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+footer .footer-content .footer-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+footer .footer-content .footer-section h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+footer .footer-content .footer-section.links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+footer .footer-content .footer-section.links ul li a{
+    text-decoration: none;
+    color: var(--tertiary-text);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+footer .footer-content .footer-section.links ul li a:hover{
+    color: var(--bg);
+    font-weight: 600;
+    transform: scale(1.1);
+}
+footer .footer-content .footer-section.about .logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+footer .footer-content .footer-section.about .logo h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+}
+footer .footer-content .footer-section.about .logo h2 span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .footer-content .footer-section.about .logo h2 span svg path{
+    stroke: currentColor;
+}
+main{
+    width: 100%;
+    min-height: 60dvh;
+    padding: var(--padding) var(--padding) 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+main .cart{
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1rem;
+    border: #000 1px solid;
+}
+main .cart .items-cart-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-height: 40dvh;
+    overflow-y: auto;
+    padding-top: 0.5rem;
+}
+main .cart .items-cart-wrapper::-webkit-scrollbar{
+    width: 8px;
+}
+main .cart .items-cart-wrapper::-webkit-scrollbar-thumb{
+    background-color: var(--accent);
+    border-radius: 4px;
+}
+main .cart .items-cart-wrapper .item-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem;
+    border: #000 1px solid;
+    border-radius: var(--radius);
+    background: var(--bg);
+}
+main .cart .items-cart-wrapper .item-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+main .cart .items-cart-wrapper .item-cart .item-wrapper img{
+    width: 160px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+main .cart .items-cart-wrapper .item-cart .item-wrapper .info-item-cart{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+main .cart .items-cart-wrapper .item-cart .item-wrapper .info-item-cart h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+main .cart .items-cart-wrapper .item-cart .item-wrapper .info-item-cart p:nth-child(2){
+    color: var(--secondary-text);
+}
+main .cart .items-cart-wrapper .item-cart .actions-item-cart{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}  
+main .cart .items-cart-wrapper .item-cart .actions-item-cart button{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10rem;
+    background: var(--accent);
+    color: var(--tertiary-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+main .cart .items-cart-wrapper .item-cart .actions-item-cart button:hover{
+    background: var(--primary-text);
+    color: var(--bg);
+    transform: scale(1.05);
+}
+main .cart .items-cart-wrapper .item-cart .actions-item-cart .quantity{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+main .cart .items-cart-wrapper .item-cart .actions-item-cart .quantity button{
+    font-size: 1rem;
+    font-weight: 600;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+}
+main .cart .items-cart-wrapper .item-cart .actions-item-cart .quantity input[type="number"]{
+    width: 3rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    border: #000 1px solid;
+    border-radius: var(--radius);
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[readonly] {
+    cursor: default;
+}
+
+main .cart-summary{
+    grid-column-start: 3;
+    grid-row-start: 1;
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1rem;
+    border: #000 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+main .cart-summary .summary-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .cart-summary .summary-wrapper .summary,
+main .cart-summary .summary-wrapper .summary-values{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+main .cart-summary .summary-wrapper .summary h4,
+main .cart-summary .summary-wrapper .summary-values h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+main .cart-summary .summary-wrapper .summary p,
+main .cart-summary .summary-wrapper .summary-values p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-text);
+}
+main .cart-summary .summary-wrapper .summary-values p,
+main .cart-summary .summary-wrapper .summary-values h4{
+    text-align: right;
+}
+main .cart-summary .summary-wrapper .summary h4:last-child,
+main .cart-summary .summary-wrapper .summary-values h4:last-child{
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-top: 0.5rem;
+}
+main .cart-summary button{
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 10rem;
+    background: var(--accent);
+    color: var(--tertiary-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+main .cart-summary button:hover{
+    background: var(--primary-text);
+    color: var(--bg);
+    transform: scale(1.05);
+}
+
+main .payment-security{
+    grid-column-start: 3;
+    grid-row-start: 2;
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1rem;
+    border: #000 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+main .payment-security img{
+    width: 100%;
+    object-fit: contain;
+}
+main .payment-security p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-text);
+    text-align: center;
+    margin-top: 1rem;
+}

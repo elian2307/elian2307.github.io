@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/mediaQuerys.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>PilloPhoneStore</title>
+    <title>PilloPhone - Cart</title>
 </head>
 <body>
     <header>
@@ -33,82 +33,76 @@
                 <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
-        <div class="banner">
-            <div class="banner-info">
-                <h2>Telefonos</h2>
-                <h2>Gama Alta</h2>
-            </div>
-            <div class="banner-img">
-                <img src="img/banner-phone.webp" alt="Imagen de un telefono">
-        </div>
-
     </header>
-    <section class="destacado">
-        <h2>Destacado</h2>
-        <div class="product-card-wrapper">
-            <div class="product-card">
-                <img width="200" src="img/pixel_10_pro_xl.webp" alt="Destacado 1">
-                <div class="product-card-info">
-                    <h3>Pixel 10 Pro XL</h3>
-                    <h3>$850</h3>
+    <main>
+        <div class="cart">
+            <h2>Tu Carrito</h2>
+            <div class="items-cart-wrapper">
+                <div class="item-cart">
+                    <div class="item-wrapper">
+                        <div class="img-item-cart">
+                            <img width="200" src="img/s25_ultra.webp" alt="Galaxy S25 Ultra ">
+                        </div>
+                        <div class="info-item-cart">
+                            <h3>Galaxy S25 Ultra</h3>
+                            <p>Modelo: 512Gb</p>
+                            <p>Precio: $1,299</p>
+                        </div>
+                    </div>
+                    <div class="actions-item-cart">
+                        <div class="quantity">
+                            <button><i class="fas fa-minus"></i></button>
+                            <input type="number" id="quantity-1" name="quantity-1" value="1" min="1" readonly>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="product-card">
-                <img width="200" src="img/fold_7.webp" alt="Destacado 1">
-                <div class="product-card-info">
-                    <h3>Galaxy Z Fold 7</h3>
-                    <h3>$1,799 <span>$1,999</span></h3>
-                </div>
-            </div>
-            <div class="product-card">
-                <img width="200" src="img/iphone_17_pro_max.webp" alt="Destacado 1">
-                <div class="product-card-info">
-                    <h3>iPhone 17 Pro Max</h3>
-                    <h3>$1,199</h3>
-                </div>
-            </div>
-            <div class="product-card">
-                <img width="200" src="img/s25_ultra.webp" alt="Destacado 1">
-                <div class="product-card-info">
-                    <h3>Galaxy S25 Ultra</h3>
-                    <h3>$1,299</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="destacado">
-        <h2>Destacado: <span>Tablets</span></h2>
-        <div class="product-card-wrapper">
-            <div class="product-card">
-                <img width="200" src="img/ipad_pro_m4_2024.webp" alt="Destacado 1">
-                <div class="product-card-info">
-                    <h3>iPad Pro M4 2024</h3>
-                    <h3>$1,099</h3>
-                </div>
-            </div>
-            <div class="product-card">
-                <img width="200" src="img/galaxy_tab11_ultra.webp" alt="Destacado 1">
-                <div class="product-card-info">
-                    <h3>Galaxy Tab 11 Ultra</h3>
-                    <h3>$1,199</h3>
-                </div>
-            </div>
-            <div class="product-card">
-                <img width="200" src="img/RedMagic-Astra-tablet-Gaming.webp" alt="Destacado 1">
-                <div class="product-card-info">
-                    <h3>RedMagic Astra</h3>
-                    <h3>$699 <span>$899</span></h3>
-                </div>
-            </div>
-            <div class="product-card">
-                <img width="200" src="img/Xiaomi-Pad-7.webp" alt="Destacado 1">
-                <div class="product-card-info">
-                    <h3>Xiaomi Pad 7</h3>
-                    <h3>$499</h3>
+                <div class="item-cart">
+                    <div class="item-wrapper">
+                        <div class="img-item-cart">
+                            <img width="200" src="img/s25_ultra.webp" alt="Galaxy S25 Ultra ">
+                        </div>
+                        <div class="info-item-cart">
+                            <h3>Galaxy S25 Ultra</h3>
+                            <p>Modelo: 512Gb</p>
+                            <p>Precio: $1,299</p>
+                        </div>
+                    </div>
+                    <div class="actions-item-cart">
+                        <div class="quantity">
+                            <button><i class="fas fa-minus"></i></button>
+                            <input type="number" id="quantity-1" name="quantity-1" value="1" min="1" readonly>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="cart-summary">
+            <div class="summary-wrapper">
+                <div class="summary">
+                    <p>Total de articulos</p>
+                    <p>Descuentos de articulos</p>
+                    <h4>Subtotal</h4>
+                    <h4>Envio</h4>
+                    <h4>Total</h4>
+                </div>
+                <div class="summary-values">
+                    <p>$1,299.00</p>
+                    <p>$0.00</p>
+                    <h4>$1,299.00</h4>
+                    <h4>$300.00</h4>
+                    <h4>$1,599.00</h4>
+                </div>
+            </div>
+            <button class="checkout-btn">Continuar</button>
+        </div>
+        <div class="payment-security">
+            <h4><span><i class="fas fa-lock"></i></span>Pagos Seguros</h4>
+            <img width="200px" src="img/payment_security.webp" alt="Medios de pago seguros">
+            <p>Socios de pago populares tus pagos estaran seguros</p>
+        </div>
+    </main>
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
@@ -141,5 +135,6 @@
         </div>
     </footer>
     <script src="js/responsive.js"></script>
+    
 </body>
 </html>

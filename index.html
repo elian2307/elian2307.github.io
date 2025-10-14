@@ -16,10 +16,21 @@
             color: #333;
         }
         .items-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             margin-top: 30px;
+            justify-items: center;
+            gap: 20px;
+        }
+        @media (max-width: 800px) {
+            .items-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 500px) {
+            .items-container {
+                grid-template-columns: 1fr;
+            }
         }
         .item {
             background-color: #fff;
