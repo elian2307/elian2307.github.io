@@ -1,6 +1,6 @@
 // Crear el elemento SVG del ícono de hamburguesa
 const hamburger = document.createElement('img');
-hamburger.src = 'assets/bars-solid-full.svg';
+hamburger.src = 'assets/svg/bars-solid-full.svg';
 hamburger.alt = 'Menú';
 hamburger.width = 24;
 hamburger.height = 24;
@@ -26,10 +26,10 @@ function toggleMenu() {
 
     // Cambiar el ícono según el estado
     if (isActive) {
-        hamburger.src = 'assets/xmark-solid-full.svg';
+        hamburger.src = 'assets/svg/xmark-solid-full.svg';
         hamburger.style.zIndex = '1011';
     } else {
-        hamburger.src = 'assets/bars-solid-full.svg';
+        hamburger.src = 'assets/svg/bars-solid-full.svg';
         hamburger.style.zIndex = '1001';
     }
 }
@@ -39,7 +39,7 @@ function closeMenu() {
     navMenu.classList.remove('active');
     overlay.classList.remove('active');
     document.body.classList.remove('menu-open');
-    hamburger.src = 'assets/bars-solid-full.svg';
+    hamburger.src = 'assets/svg/bars-solid-full.svg';
 }
 
 // Eventos
