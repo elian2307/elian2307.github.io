@@ -1,9 +1,10 @@
 .hamburger {
     display: none;
-    font-size: 1.8rem;
+    width: 36px;       /* Ajuste del tamaño del SVG */
+    height: 36px;      /* Ajuste del tamaño del SVG */
     cursor: pointer;
-    color: var(--primary-text);
-    z-index: 1001;
+    z-index: 1011;
+    position: relative;  
     transition: transform 0.3s ease;
 }
 
@@ -123,7 +124,6 @@ body.menu-open {
         margin-top: 1rem;
     }
 
-
     .destacado .product-card-wrapper {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -217,7 +217,7 @@ body.menu-open {
         grid-template-columns: repeat(2, 1fr);
     }
 
-     main {
+    main {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 1.5rem;
@@ -263,6 +263,7 @@ body.menu-open {
         grid-row: auto;
         width: 100%;
     }
+
     main .cart .items-cart-wrapper .item-cart {
         flex-direction: row;
         align-items: center;

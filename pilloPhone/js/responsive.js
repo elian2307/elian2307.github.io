@@ -27,8 +27,10 @@ function toggleMenu() {
     // Cambiar el ícono según el estado
     if (isActive) {
         hamburger.src = 'assets/xmark-solid-full.svg';
+        hamburger.style.zIndex = '1011';
     } else {
         hamburger.src = 'assets/bars-solid-full.svg';
+        hamburger.style.zIndex = '1001';
     }
 }
 
