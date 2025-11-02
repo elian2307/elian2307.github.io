@@ -1,44 +1,61 @@
-let quantity = document.getElementById('quantity');
-document.getElementById('increase').addEventListener('click', () => {
-    if (parseInt(quantity.value) < 15)
-    quantity.value = parseInt(quantity.value) + 1;
-});
-document.getElementById('decrease').addEventListener('click', () => {
-    if (parseInt(quantity.value) > 1) {
-        quantity.value = parseInt(quantity.value) - 1;
-    }
-});
+const decreaseBtn = document.getElementById("decrease");
+const increaseBtn = document.getElementById("increase");
+const quantityInput = document.getElementById("quantity");
+const smallSizeBtn = document.getElementById("small-size");
+const largeSizeBtn = document.getElementById("large-size");
+const priceCurrent = document.querySelector(".price .current");
+const priceOld = document.querySelector(".price .old");
+const discountText = document.querySelector(".price .discount");
 
-let mainImg = document.getElementById('main-product-img');
-let thumbs = document.querySelectorAll('.thumb');
-for (let i = 0; i < thumbs.length; i++) {
-    thumbs[i].addEventListener('click', () => {
-        tempSrc = thumbs[i].src;
-        tempSrc = tempSrc.replace('thumbs', '');
-        mainImg.src = tempSrc;
-        thumbs[i].classList.add('active');
-        for (let j = 0; j < thumbs.length; j++) {
-            if (j !== i) {
-                thumbs[j].classList.remove('active');
-            }}
-    });
+let basePrice = 20;
+let smallPrice = 15;
+let maxCantidad = 15;
+let minCantidad = 1;
+
+function updatePrice() {
+  let quantity = parseInt(quantityInput.value) || 1;
+  let unitPrice = largeSizeBtn.classList.contains("active") ? basePrice : smallPrice;
+  let subtotal = unitPrice * quantity;
+  let discount = 0;
+
+  if (quantity >= 10) {
+    discount = 0.20;
+  } else if (quantity >= 5) {
+    discount = 0.10;
+  }
+
+  let total = subtotal - subtotal * discount;
+
+  priceCurrent.textContent = `$${total.toFixed(2)}`;
+  priceOld.textContent = discount > 0 ? `$${subtotal.toFixed(2)}` : "";
+  discountText.textContent = discount > 0 ? `${discount * 100}% OFF` : "";
 }
 
-const sizeBtn = document.querySelectorAll('.size-btn');
-sizeBtn.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        sizeBtn.forEach((button) => button.classList.remove('active'));
-        btn.classList.add('active');
-        if (btn.id === 'small-size'){
-            document.querySelector('.price .old').style.display = 'none';
-            document.querySelector('.price .discount').style.display = 'none';
-            document.querySelector('.price .current').textContent = '$15.00';
+increaseBtn.addEventListener("click", () => {
+  let value = parseInt(quantityInput.value) || 1;
+  if (value < maxCantidad) {
+    quantityInput.value = value + 1;
+    updatePrice();
+  }
+});
 
-        }
-        if (btn.id === 'large-size'){
-            document.querySelector('.price .old').style.display = 'inline';
-            document.querySelector('.price .discount').style.display = 'inline';
-            document.querySelector('.price .current').textContent = '$16.00';
-        }
-        
-    })});
+decreaseBtn.addEventListener("click", () => {
+  let value = parseInt(quantityInput.value) || 1;
+  if (value > minCantidad) {
+    quantityInput.value = value - 1;
+    updatePrice();
+  }
+});
+
+function selectSize(selectedBtn) {
+  smallSizeBtn.classList.remove("active");
+  largeSizeBtn.classList.remove("active");
+  selectedBtn.classList.add("active");
+
+  updatePrice();
+}
+
+smallSizeBtn.addEventListener("click", () => selectSize(smallSizeBtn));
+largeSizeBtn.addEventListener("click", () => selectSize(largeSizeBtn));
+
+updatePrice();
