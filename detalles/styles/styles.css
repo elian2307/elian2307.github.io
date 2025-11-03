@@ -241,22 +241,38 @@ header nav a:hover {
 }
 
 .review {
-  background: #fff;
+  background: #fdfdfd;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 15px;
+  margin-top: 15px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: #000 1px solid;
 }
-
-.review-actions {
+.review-header {
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.review-actions button {
-  background: none;
-  border: none;
-  color: #7c3aed;
-  cursor: pointer;
+.review-header .reviewer-info {
+  font-weight: bold;
+}
+.reviewer-info .reviewer-name{
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.review-header .review-date {
+  color: #888;
+  font-size: 0.9em;
+}
+.review-rating {
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+.review-text {
+  color: #555;
+  line-height: 1.5;
 }

@@ -12,7 +12,7 @@ let smallPrice = 15;
 let maxCantidad = 15;
 let minCantidad = 1;
 
-function updatePrice() {
+const updatePrice = () => {
   let quantity = parseInt(quantityInput.value) || 1;
   let unitPrice = largeSizeBtn.classList.contains("active") ? basePrice : smallPrice;
   let subtotal = unitPrice * quantity;
@@ -47,7 +47,7 @@ decreaseBtn.addEventListener("click", () => {
   }
 });
 
-function selectSize(selectedBtn) {
+const selectSize = (selectedBtn) => {
   smallSizeBtn.classList.remove("active");
   largeSizeBtn.classList.remove("active");
   selectedBtn.classList.add("active");
